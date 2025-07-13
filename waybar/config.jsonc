@@ -1,0 +1,124 @@
+{
+    "layer": "top",
+    "height": 30,
+    "spacing": 0,
+    "margin-top": "10px",
+    "margin-left": "10px",
+    "margin-right": "10px",
+    "width": "calc(100% - 20px)",
+    "mode": "dock",
+    "exclusive": true,
+    "passthrough": false,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/spacer-right",
+    ],
+    "modules-right": [
+        "custom/workspace-text",
+        "custom/pulseaudiotext",
+        "pulseaudio",
+        "custom/pulseaudio2",
+        "custom/networktext",
+        "network",
+        "custom/memorytext",
+        "memory",
+        "custom/languagetext",
+        "hyprland/language",
+        "custom/clocktext",
+        "clock",
+        "custom/power"
+    ],
+
+    "custom/workspace-text": {
+        "tooltip": false
+    },
+
+    "custom/languagetext": {
+        "format": "󰌌"
+    },
+    "hyprland/language": {
+        "format": "{short}"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "persistent": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    "custom/clocktext": {
+        "format": "󰥔"
+    },
+    "clock": {
+        "format": "{:%I:%M%p}",
+        "on-click": "eww open date --toggle",
+        "tooltip": false
+    },
+    "custom/memorytext": {
+        "format": ""
+    },
+    "memory": {
+        "format": "{}%"
+    },
+    "custom/networktext": {
+        "format": ""
+    },
+    "network": {
+        "format-ethernet": "connected",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "custom/pulseaudiotext": {
+        "format": ""
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "cava": {
+        "cava_config": "/home/yousef/.config/cava/config",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 2,
+        "bars": 40,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 0,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "on-click": "eww open music --toggle"
+    },
+    "custom/power": {
+        "format": "⏻ ",
+        "tooltip": false,
+        "on-click": "rofi -show power-menu -show-icons -modi power-menu:rofi-power-menu"
+    }
+}
+

@@ -63,6 +63,9 @@ ln -sf "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 ln -sf "$DOTFILES_DIR/fastfetch" "$HOME/.config/fastfetch"
 ln -sf "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
 ln -sf "$DOTFILES_DIR/kitty" "$HOME/.config/kitty"
+ln -sf "$DOTFILES_DIR/hypr" "$HOME/.config/hypr"
+ln -sf "$DOTFILES_DIR/wofi" "$HOME/.config/wofi"
+ln -sf "$DOTFILES_DIR/waybar" "$HOME/.config/waybar"
 
 # Set shell to zsh
 if [[ "$SHELL" != *"zsh" ]]; then
@@ -71,4 +74,4 @@ if [[ "$SHELL" != *"zsh" ]]; then
 fi
 
 echo "✅ Setup complete for $PM-based system!"
-
+echo "PLEASE INSTALL HYPRLAND MANUALLY (TOO RISKY TO DO IT FROM HERE...)"

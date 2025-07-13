@@ -1,0 +1,7 @@
+[settings]
+show-icons=true
+mode=drun
+allow_images=true
+term=kitty
+font=JetBrains Mono 12
+location=center
