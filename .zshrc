@@ -90,6 +90,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -102,8 +103,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
 alias bat='batcat'
 alias fd='fdfind'
+alias obsidian='flatpak run md.obsidian.Obsidian'
+
+# Quick fastfetch for aesthetics
 fastfetch
+
+#Override themes with starship
 eval "$(starship init zsh)"
+
+#Export some paths and add some configs
+export PATH="$HOME/.config/rofi-power-menu:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export MOZ_ENABLE_WAYLAND=1 # FIREFOX RUNS QUICKER WITH THIS

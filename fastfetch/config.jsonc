@@ -3,7 +3,7 @@
   "logo": {
     "source": "/home/fabioleoli/.config/beijkon_logo",
     "padding": {
-      "top": 3,
+      "top": 0,
       "right": 5
     }
   },

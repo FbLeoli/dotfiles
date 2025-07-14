@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, JetBrains Mono NF, Roboto, Helvetica, Arial, sans-serif;
@@ -20,7 +22,8 @@ window#waybar.hidden {
   margin-right: 10pt;
   margin-top: 10pt;
   background-color: rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(250,189,47,0.7);
+/*  border: 2px solid rgba(250,189,47,0.7); */
+  border: 2px solid @primary;
   padding: 8pt 2pt;
   border-radius: 10px;
 }
@@ -56,12 +59,13 @@ button:hover {
 #workspaces {
     padding-left: 0px;
     margin-left: 10px;
-    border: 2px solid #458588;
+    /*border: 2px solid #458588;*/
+    border: 2px solid @primary;
     border-radius: 8px; 
 }
 #workspaces button {
     padding: 0px 13px;
-    color: #ebdbb2;
+    color: @primary;
 }
 
 #workspaces button lablel{
@@ -78,7 +82,7 @@ button:hover {
 
 #workspaces button.active {
     color: #000000;
-    background: #458588;
+    background: @primary;
 }
 
 #workspaces button.urgent {
@@ -107,6 +111,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#custom-bluetooth,
 #mpd {
     padding: 0 10px;
     margin: 0 0px;
@@ -162,6 +167,26 @@ label:focus {
     border-radius: 0px 8px 8px 0px;
 }
 
+#custom-bluetoothtext {
+    background: #8ec07c;
+    border-radius: 8px 0px 0px 8px;
+    padding: 0 10px;
+    color: #000000;
+    margin-left: 10px;
+}
+#custom-bluetooth {
+    border: 2px solid #8ec07c;
+    color: #ebdbb2;
+    border-radius: 0px 8px 8px 0px;
+}
+
+#custom-networktext {
+    background: #8ec07c;
+    border-radius: 8px 0px 0px 8px;
+    padding: 0 10px;
+    color: #000000;
+    margin-left: 10px;
+}
 #network.disconnected {
     background-color: #f53c3c;
 }
@@ -184,9 +209,9 @@ label:focus {
 }
 
 #tray {
-    color: #2980b9;
-    padding-right: 10px;
-    margin-left: 10px;
+    color: #2979b9;
+    padding-right: 9px;
+    margin-left: 9px;
 }
 
 #tray > .passive {
@@ -195,7 +220,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: #eb3d4b;
 }
 
 
@@ -247,4 +272,13 @@ label:focus {
     color: #cccccc;
     font-size: 14px;
     margin: 0 5px;
+}
+
+#custom-notification {
+    font-family: "NotoSansMono Nerd Font";
+    background: #83a598;
+    border-radius: 8px 0px 0px 8px;
+    padding: 0 10px;
+    color: #000000;
+    margin-left: 10px 
 }

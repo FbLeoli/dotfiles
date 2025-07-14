@@ -1,0 +1,41 @@
+window {
+  margin: 0px;
+  border: 1px solid {{colors.outline.dark.hex}};
+  background-color: {{colors.surface.dark.hex}};
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  color: {{colors.on_surface.dark.hex}};
+  background-color: {{colors.surface_container.dark.hex}};
+}
+
+#inner-box,
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: {{colors.surface.dark.hex}};
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: {{colors.on_surface.dark.hex}};
+}
+
+#entry:selected {
+  background-color: {{colors.secondary_container.dark.hex}};
+}
+
+#entry image {
+  margin-right: 10px;
+  min-width: 24px;
+  min-height: 24px;
+}
+

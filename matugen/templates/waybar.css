@@ -1,0 +1,3 @@
+@define-color primary {{colors.primary.dark.hex}};
+@define-color background {{colors.background.dark.hex}};
+@define-color surface {{colors.surface.dark.hex}};

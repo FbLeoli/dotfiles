@@ -1,0 +1,27 @@
+[config]
+mode = "Dark"
+
+[templates.default]
+input_path = "~/.config/matugen/templates/default.css"
+output_path = "~/.config/matugen/generated.css"
+
+[templates.waybar]
+input_path = "~/.config/matugen/templates/waybar.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.hyprland]
+input_path = "~/.config/matugen/templates/hyprland.conf"
+output_path = "~/.config/hypr/theme.conf"
+post_hook = "hyprctl reload"
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -USR1 kitty'
+
+[templates.wofi]
+input_path = "~/.config/matugen/templates/wofi.css"
+output_path = "~/.config/wofi/style.css"
+post_hook = ""
+

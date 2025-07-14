@@ -66,6 +66,8 @@ ln -sf "$DOTFILES_DIR/kitty" "$HOME/.config/kitty"
 ln -sf "$DOTFILES_DIR/hypr" "$HOME/.config/hypr"
 ln -sf "$DOTFILES_DIR/wofi" "$HOME/.config/wofi"
 ln -sf "$DOTFILES_DIR/waybar" "$HOME/.config/waybar"
+ln -sf "$DOTFILES_DIR/swaync" "$HOME/.config/swaync"
+ln -sf "$DOTFILES_DIR/matugen" "$HOME/.config/matugen"
 
 # Set shell to zsh
 if [[ "$SHELL" != *"zsh" ]]; then
@@ -74,4 +76,4 @@ if [[ "$SHELL" != *"zsh" ]]; then
 fi
 
 echo "✅ Setup complete for $PM-based system!"
-echo "PLEASE INSTALL HYPRLAND MANUALLY (TOO RISKY TO DO IT FROM HERE...)"
+echo "PLEASE INSTALL HYPRLAND AND EVERYTHING ELSE MANUALLY (TOO RISKY TO DO IT FROM HERE...)"

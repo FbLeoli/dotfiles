@@ -1,0 +1,8 @@
+:root {
+  --primary: {{colors.primary.dark.hex}};
+  --background: {{colors.background.dark.hex}};
+  --surface: {{colors.surface.dark.hex}};
+  --on-primary: {{colors.on_primary.dark.hex}};
+  --on-background: {{colors.on_background.dark.hex}};
+}
+
