@@ -15,6 +15,7 @@
         "custom/spacer-right"
     ],
     "modules-right": [
+        "custom/traytext",
         "tray",
         "custom/workspace-text",
         "custom/pulseaudiotext",
@@ -33,11 +34,16 @@
         "custom/notification",
         "custom/power"
     ],
-
     "custom/workspace-text": {
         "tooltip": false
     },
-
+    "custom/traytext": {
+        "format": "" // nf-md-tray (try also  or )
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 6
+    },
     "custom/languagetext": {
         "format": "󰌌"
     },
@@ -131,10 +137,6 @@
         "format": "⏻ ",
         "tooltip": false,
         "on-click": "/usr/bin/rofi -show power-menu -show-icons -modi power-menu:~/.config/rofi-power-menu/rofi-power-menu"
-    },
-    "tray": {
-        "icon-size": 16,
-        "spacing": 6
     }
 }
 

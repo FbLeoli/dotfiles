@@ -92,6 +92,16 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch $(uname -m)"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Define a function to use cd together with fzf
+cd_to_dir() {
+    local selected_dir
+    selected_dir=$(fd -H -t d . "$1" | fzf +m --height 50% --preview 'tree -C {}')
+    if [[ -n "$selected_dir" ]]; then
+        # Change to the selected directory
+        cd "$selected_dir" || return 1
+    fi
+}
+
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
@@ -104,9 +114,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bat='batcat'
-alias fd='fdfind'
+# alias fd='fdfind'
 alias obsidian='flatpak run md.obsidian.Obsidian'
-
+alias cdd='cd_to_dir ~'
+alias cds='cd_to_dir'
+#
 # Quick fastfetch for aesthetics
 fastfetch
 
@@ -117,3 +129,5 @@ eval "$(starship init zsh)"
 export PATH="$HOME/.config/rofi-power-menu:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export MOZ_ENABLE_WAYLAND=1 # FIREFOX RUNS QUICKER WITH THIS
+
+export PATH=$PATH:/home/fabioleoli/.spicetify

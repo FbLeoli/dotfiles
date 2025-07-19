@@ -21,9 +21,9 @@ window#waybar.hidden {
   margin-left: 10pt;
   margin-right: 10pt;
   margin-top: 10pt;
-  background-color: rgba(0, 0, 0, 0.4);
-/*  border: 2px solid rgba(250,189,47,0.7); */
-  border: 2px solid @primary;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(250,189,47,0);
+/* border: 2px solid @primary; */
   padding: 8pt 2pt;
   border-radius: 10px;
 }
@@ -112,6 +112,7 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #custom-bluetooth,
+#custom-power,
 #mpd {
     padding: 0 10px;
     margin: 0 0px;
@@ -125,14 +126,16 @@ button:hover {
 }
 
 #custom-clocktext {
-    background: #b8bb26;
+    background: @primary;
+    /*background: #b8bb26;*/
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
     margin-left: 10px;
 }
 #clock {
-    border: 2px solid #b8bb26;
+    /* border: 2px solid #b8bb26;*/
+    border: 2px solid @primary;
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
 }
@@ -142,90 +145,97 @@ label:focus {
 }
 
 #custom-memorytext {
-    background: #b16286;
+    background: @primary;
+    /*background: #b16286;*/
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
     margin-left: 10px;
 }
 #memory {
-    border: 2px solid #b16286;
+    border: 2px solid @primary;
+    /* border: 2px solid #b16286;*/
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
 }
 
 #custom-networktext {
-    background: #8ec07c;
+    background: @primary;
+    /*background: #8ec07c;*/
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
     margin-left: 10px;
 }
 #network {
-    border: 2px solid #8ec07c;
+    border: 2px solid @primary;
+    /* border: 2px solid #8ec07c;*/
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
 }
+#network.disconnected {
+    background-color: #f53c3c;
+}
 
 #custom-bluetoothtext {
-    background: #8ec07c;
+    background: @primary;
+    /*background: #8ec07c;*/
+    /* border: 2px solid #8ec07c;*/
+    border: 2px solid @primary;
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
     margin-left: 10px;
 }
 #custom-bluetooth {
-    border: 2px solid #8ec07c;
+    /* border: 2px solid #8ec07c;*/
+    border: 2px solid @primary;
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
-}
-
-#custom-networktext {
-    background: #8ec07c;
-    border-radius: 8px 0px 0px 8px;
-    padding: 0 10px;
-    color: #000000;
-    margin-left: 10px;
-}
-#network.disconnected {
-    background-color: #f53c3c;
 }
 
 #custom-pulseaudiotext {
-    background: #fabd2d;
+    background: @primary;
+    /*background: #fabd2d;*/
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
+    margin-left:10px;
 }
 #pulseaudio {
-    border: 2px solid #fabd2d;
+    /* border: 2px solid #fabd2d;*/
+    border: 2px solid @primary;
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
 }
-
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
 }
-
+#custom-traytext {
+    background: @primary;
+    border-radius: 8px 0px 0px 8px;
+    color: #000000;
+    padding: 0 10px;
+    margin-left: 10px;
+}
 #tray {
-    color: #2979b9;
-    padding-right: 9px;
-    margin-left: 9px;
+    border: 2px solid @primary;
+    border-radius: 0px 8px 8px 0px;
 }
 
-#tray > .passive {
+ /* #tray > .passive {
     -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb3d4b;
-}
-
+} */
 
 #custom-languagetext {
-    background: #83a598;
+    background: @primary;
+    /*background: #83a598;*/
     font-size: 20px;
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
@@ -233,7 +243,8 @@ label:focus {
     margin-left: 10px;
 }
 #language {
-    border: 2px solid #83a598;
+    /* border: 2px solid #83a598;*/
+    border: 2px solid @primary;
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
     padding: 0 10px;
@@ -250,7 +261,10 @@ label:focus {
 }
 
 #custom-power {
-    margin: 0px 15px;
+    margin-right: 10px;
+    border: 2px solid @primary;
+    border-radius: 0px 8px 8px 0px;
+    padding-right: 10px; 
 }
 #custom-spotify {
     color: #689d6a;
@@ -276,7 +290,8 @@ label:focus {
 
 #custom-notification {
     font-family: "NotoSansMono Nerd Font";
-    background: #83a598;
+    /* background: #83a598;*/
+    background: @primary;
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
