@@ -1,3 +1,5 @@
+-- For specifically plugin targeted keybinds, please look in the specific plugin.lua file (e.g. for keybinds related to formatters look into none-ls.lua file
+
 vim.keymap.set("i", "jk", "<Esc>", { noremap = true}) -- Use jk to go to normal mode if in insert mode
 
 -- For better navigation (sync with tmux)
