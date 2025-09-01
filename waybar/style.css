@@ -51,11 +51,6 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    color: #a37800;
-}
-
 #workspaces {
     padding-left: 0px;
     margin-left: 10px;
@@ -113,50 +108,65 @@ button:hover {
 #power-profiles-daemon,
 #custom-bluetooth,
 #custom-power,
+#language,
 #mpd {
     padding: 0 10px;
     margin: 0 0px;
     color: #ffffff;
+    /*background-color: rgba(60, 56, 54, 0.9); bg1 com transparência */
+    background-color: @background;
+    color: white;
 }
 
 #window,
 #workspaces {
     margin: 0 10px;
+    background-color: @background;
     /* background-color: rgba(43, 48, 59, 1.0); */
 }
 
-#custom-clocktext {
+#custom-traytext {
     background: @primary;
-    /*background: #b8bb26;*/
+    border-radius: 8px 0px 0px 8px;
+    color: #000000;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+#tray {
+    border: 2px solid @primary;
+    border-radius: 0px 8px 8px 0px;
+}
+
+ /* #tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb3d4b;
+} */
+
+#custom-pulseaudiotext {
+    background: @primary;
+    /*background: #fabd2d;*/
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
-    margin-left: 10px;
+    margin-left:10px;
 }
-#clock {
-    /* border: 2px solid #b8bb26;*/
+#pulseaudio {
+    /* border: 2px solid #fabd2d;*/
     border: 2px solid @primary;
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
 }
-
-label:focus {
-    background-color: #000000;
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
 }
-
-#custom-memorytext {
-    background: @primary;
-    /*background: #b16286;*/
-    border-radius: 8px 0px 0px 8px;
-    padding: 0 10px;
-    color: #000000;
-    margin-left: 10px;
-}
-#memory {
-    border: 2px solid @primary;
-    /* border: 2px solid #b16286;*/
-    color: #ebdbb2;
-    border-radius: 0px 8px 8px 0px;
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    color: #a37800;
 }
 
 #custom-networktext {
@@ -194,44 +204,20 @@ label:focus {
     border-radius: 0px 8px 8px 0px;
 }
 
-#custom-pulseaudiotext {
+#custom-memorytext {
     background: @primary;
-    /*background: #fabd2d;*/
+    /*background: #b16286;*/
     border-radius: 8px 0px 0px 8px;
     padding: 0 10px;
     color: #000000;
-    margin-left:10px;
+    margin-left: 10px;
 }
-#pulseaudio {
-    /* border: 2px solid #fabd2d;*/
+#memory {
     border: 2px solid @primary;
+    /* border: 2px solid #b16286;*/
     color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
 }
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-#custom-traytext {
-    background: @primary;
-    border-radius: 8px 0px 0px 8px;
-    color: #000000;
-    padding: 0 10px;
-    margin-left: 10px;
-}
-#tray {
-    border: 2px solid @primary;
-    border-radius: 0px 8px 8px 0px;
-}
-
- /* #tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb3d4b;
-} */
 
 #custom-languagetext {
     background: @primary;
@@ -243,13 +229,65 @@ label:focus {
     margin-left: 10px;
 }
 #language {
-    /* border: 2px solid #83a598;*/
     border: 2px solid @primary;
-    color: #ebdbb2;
     border-radius: 0px 8px 8px 0px;
     padding: 0 10px;
 }
 
+#custom-clocktext {
+    background: @primary;
+    /*background: #b8bb26;*/
+    border-radius: 8px 0px 0px 8px;
+    padding: 0 10px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+#clock {
+    border: 2px solid @primary;
+    color: #ebdbb2;
+    border-radius: 0px 8px 8px 0px;
+}
+
+#custom-batterytext {
+    background: @primary;
+    /*background: #b8bb26;*/
+    border-radius: 8px 0px 0px 8px;
+    padding: 0 10px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+#battery {
+    /* border: 2px solid #b8bb26;*/
+    border: 2px solid @primary;
+    color: #ebdbb2;
+    border-radius: 0px 8px 8px 0px;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#custom-notification {
+    font-family: "NotoSansMono Nerd Font";
+    /* background: #83a598;*/
+    background: @primary;
+    border-radius: 8px 0px 0px 8px;
+    padding: 0 10px;
+    color: #000000;
+    margin-left: 10px 
+}
+
+#custom-power {
+    margin-right: 10px;
+    border: 2px solid @primary;
+    border-radius: 0px 8px 8px 0px;
+    padding-right: 10px; 
+}
+
+
+/* Others */
 #custom-arch {
     background: #458588;
     padding: 0 0px 0 15px;
@@ -260,12 +298,6 @@ label:focus {
     /* background-color: rgba(43, 48, 59, 1.0); */
 }
 
-#custom-power {
-    margin-right: 10px;
-    border: 2px solid @primary;
-    border-radius: 0px 8px 8px 0px;
-    padding-right: 10px; 
-}
 #custom-spotify {
     color: #689d6a;
     margin-left: 5px;
@@ -288,12 +320,3 @@ label:focus {
     margin: 0 5px;
 }
 
-#custom-notification {
-    font-family: "NotoSansMono Nerd Font";
-    /* background: #83a598;*/
-    background: @primary;
-    border-radius: 8px 0px 0px 8px;
-    padding: 0 10px;
-    color: #000000;
-    margin-left: 10px 
-}

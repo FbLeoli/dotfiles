@@ -1,4 +1,6 @@
 @define-color primary #dfc56d;
+@define-color primary_container #564500;
+@define-color on_primary #3b2f00;
 @define-color background #16130b;
 @define-color surface #16130b;
 @define-color secondary #d3c6a1;

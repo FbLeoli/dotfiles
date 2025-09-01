@@ -65,6 +65,6 @@ return {
         dependencies = {
             "saadparwaiz1/cmp_luasnip",     -- This guy is a bridge between LuaSnip and nvim-cmp, it's the bridge that allows the snipets to appear in nvim-cmp,
             "rafamadriz/friendly-snippets", -- This guy is the responsible to actually PROVIDE the snippets to LuaSnip, for ALL MAJOR LANGUAGES
-        },
+      },
     },
 }

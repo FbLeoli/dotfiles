@@ -1,6 +1,6 @@
 -- None-Ls serves as a way to add formatters and linters to neovim in a way that they can be handled by Mason/Lsp config in the same way as LSPs, grouping everything together in a simple framework :)
 
--- IMPORTANT: REMEMBER TO USE :Mason COMMAND TO INSTALL THER FORMATTERS AND LINTERS THT YOU USE OTHERWISE THIS IS USELESS :)
+-- IMPORTANT: REMEMBER TO USE :Mason COMMAND TO INSTALL THER FORMATTERS AND LINTERS THAT YOU USE OTHERWISE THIS IS USELESS :)
 return {
 	"nvimtools/none-ls.nvim",
 	config = function()

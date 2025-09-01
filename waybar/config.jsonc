@@ -17,7 +17,7 @@
     "modules-right": [
         "custom/traytext",
         "tray",
-        "custom/workspace-text",
+        //"custom/workspace-text",
         "custom/pulseaudiotext",
         "pulseaudio",
         "custom/pulseaudio2",
@@ -25,30 +25,20 @@
         "network",
         "custom/bluetoothtext",
         "custom/bluetooth",
-        "custom/memorytext",
-        "memory",
+       // "custom/memorytext",
+       // "memory",
         "custom/languagetext",
         "hyprland/language",
         "custom/clocktext",
         "clock",
+        "custom/batterytext",
+        "battery",
         "custom/notification",
         "custom/power"
     ],
+
     "custom/workspace-text": {
         "tooltip": false
-    },
-    "custom/traytext": {
-        "format": "" // nf-md-tray (try also  or )
-    },
-    "tray": {
-        "icon-size": 16,
-        "spacing": 6
-    },
-    "custom/languagetext": {
-        "format": "󰌌"
-    },
-    "hyprland/language": {
-        "format": "{short}"
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -60,57 +50,12 @@
         "on-click": "activate",
         "sort-by-number": true
     },
-    "custom/clocktext": {
-        "format": "󰥔"
+    "custom/traytext": {
+        "format": "" // nf-md-tray (try also  or )
     },
-    "clock": {
-        "format": "{:%I:%M%p}",
-        "on-click": "eww open date --toggle",
-        "tooltip": false
-    },
-    "custom/memorytext": {
-        "format": ""
-    },
-    "custom/notification": {
-        "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span>",
-            "none": "",
-            "dnd-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-none": "",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-inhibited-none": ""
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
-    "memory": {
-        "format": "{}%"
-    },
-    "custom/networktext": {
-        "format": ""
-    },
-    "network": {
-        "format-ethernet": "connected",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "custom/bluetoothtext": {
-        "format": ""
-    },
-    "custom/bluetooth": {
-        "exec": "bluetoothctl show | grep Powered | awk '{print $2}'",
-        "interval": 5,
-        "on-click": "blueman-manager"
+    "tray": {
+        "icon-size": 16,
+        "spacing": 6
     },
     "custom/pulseaudiotext": {
         "format": ""
@@ -133,10 +78,71 @@
         },
         "on-click": "pavucontrol"
     },
+    "custom/networktext": {
+        "format": ""
+    },
+    "network": {
+        "format-ethernet": "connected",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "custom/bluetoothtext": {
+        "format": ""
+    },
+    "custom/bluetooth": {
+        "exec": "bluetoothctl show | grep Powered | awk '{print $2}'",
+        "interval": 5,
+        "on-click": "blueman-manager"
+    },
+    "custom/memorytext": {
+        "format": ""
+    },
+    "memory": {
+        "format": "{}%"
+    },
+    "custom/languagetext": {
+        "format": "󰌌"
+    },
+    "hyprland/language": {
+        "format": "{short}"
+    },
+    "custom/clocktext": {
+        "format": "󰥔"
+    },
+    "clock": {
+        "format": "{:%I:%M%p}",
+        "on-click": "eww open date --toggle",
+        "tooltip": false
+    },
+    "custom/batterytext": {
+        "format": ""
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
     "custom/power": {
         "format": "⏻ ",
         "tooltip": false,
-        "on-click": "/usr/bin/rofi -show power-menu -show-icons -modi power-menu:~/.config/rofi-power-menu/rofi-power-menu"
+        "on-click": "wlogout"
     }
 }
 

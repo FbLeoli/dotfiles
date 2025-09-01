@@ -113,14 +113,15 @@ cd_to_dir() {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias bat='batcat'
+# alias bat='batcat'
 # alias fd='fdfind'
 alias obsidian='flatpak run md.obsidian.Obsidian'
 alias cdd='cd_to_dir ~'
 alias cds='cd_to_dir'
-#
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain' # Use Help with bat automatically
+
 # Quick fastfetch for aesthetics
-fastfetch
+# fastfetch
 
 #Override themes with starship
 eval "$(starship init zsh)"
@@ -128,6 +129,7 @@ eval "$(starship init zsh)"
 #Export some paths and add some configs
 export PATH="$HOME/.config/rofi-power-menu:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export MOZ_ENABLE_WAYLAND=1 # FIREFOX RUNS QUICKER WITH THIS
-
 export PATH=$PATH:/home/fabioleoli/.spicetify
+export PATH="$HOME/.cargo/bin/:$PATH"
+# Select bat automatically for man pages
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
