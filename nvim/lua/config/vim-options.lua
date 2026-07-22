@@ -11,3 +11,19 @@ vim.cmd("set shiftwidth=4")
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
+
+-- CONFIG BELOW FOR REPL AND SLIME
+-- Let vim know that we use tmux as our slime target
+vim.g.slime_target = "tmux"
+-- Pane default, so it does not ask
+vim.g.slime_default_config = { socket_name = "default", target_pane = "1" }
+-- Make it ask which session to use (because sometimes we have multiple sessions for multiple projects)
+vim.g.slime_dont_ask_default = 1
+
+-- Send visual selection with <leader>s
+vim.keymap.set("x", "<leader>s", "<Plug>SlimeRegionSend")
+-- Send paragraph with <leader>p
+vim.keymap.set("n", "<leader>p", "<Plug>SlimeParagraphSend")
+-- Send cell (ex. notebook-style) with  <leader>c
+vim.keymap.set("n", "<leader>c", "<Plug>SlimeSendCell")
+

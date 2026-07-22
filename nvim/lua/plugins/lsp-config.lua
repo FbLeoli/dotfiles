@@ -32,17 +32,20 @@ return {
 		config = function()
 			-- Check out completions.lua to understand what this line below does (advertise LSP servers so we can get autocompletions)
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
+			-- local lspconfig = require("lspconfig")
 			-- Activate servers, from nvim 0.11 and later
+            vim.lsp.config("lua_ls", {})
+            vim.lsp.config("pylsp", {})
 			vim.lsp.enable({ "lua_ls", "pylsp" })
 
 			-- For each server, add the the configuration line that allows the LSPP to use nvim-cmp as the completion engine:
-			lspconfig.pylsp.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
+			-- lspconfig.pylsp.setup({
+			-- 	capabilities = capabilities,
+			--              default_venv_name = ".venv",
+			-- })
+			-- lspconfig.lua_ls.setup({
+			-- 	capabilities = capabilities,
+			-- })
 
 			-- Define LSP keybindings on attach
 			local group = vim.api.nvim_create_augroup("LspMappings", { clear = true })
